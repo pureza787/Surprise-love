@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <title>ของขวัญวันวาเลนไทน์ 💖</title>
+    <link rel="icon" type="image/png" href="P2.png">
+</head>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="valentine-title">สุขสันต์วันวาเลนไทน์ 💖</h1>
+        <h1 class="valentine-title">THIMA 🎉</h1>
+
+        <!-- รูปด้านบน -->
+        <div class="image-box">
+            <img src="1.png" alt="Valentine" class="valentine-image">
+        </div>
+
+        <!-- กล่องกรอกรหัส -->
+        <div class="code-container">
+            <h2>ใส่รหัสของขวัญ <span class="highlight">THIMA</span></h2>
+            <div class="code-input" id="code-box">
+                <input type="text" maxlength="1" id="code1" oninput="moveToNext(this, 'code2')">
+                <input type="text" maxlength="1" id="code2" oninput="moveToNext(this, 'code3')">
+                <input type="text" maxlength="1" id="code3" oninput="moveToNext(this, 'code4')">
+                <input type="text" maxlength="1" id="code4" oninput="moveToNext(this, 'code5')">
+                <input type="text" maxlength="1" id="code5" oninput="checkCode()">
+            </div>
+
+            <!-- ดอกไม้ (ซ่อนอยู่ตอนแรก) -->
+            <div class="flower-box" id="flower-box" style="display: none;">
+                <img src="https://media.tenor.com/QX8AVauxiCMAAAAi/%E0%A6%9C%E0%A7%81%E0%A6%AE%E0%A7%8D%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A7%8B%E0%A6%AC%E0%A6%BE%E0%A6%B0%E0%A6%95.gif" 
+                     alt="ดอกไม้" class="flower-image">
+            </div>
+
+            <p class="success-message" id="success-message" style="display: none;">🎉 สุขสันต์วันวาเลนไทน์นะคนสวย 💐
+
+                ขอบคุณที่อยู่ข้างๆกัน ไม่ว่าจะวันดีๆ หรือวันที่เหนื่อยล้า ขอให้วันนี้เป็นอีกหนึ่งวันพิเศษที่เต็มไปด้วยรอยยิ้มและความสุข 😊ขอให้ทุกช่วงเวลาของเธออบอุ่นเเละสดใส เต็มไปด้วยสิ่งดีๆ สมหวังในทุกสิ่งที่ตั้งใจนะ 💖✨ อย่าลืมหาอะไรอร่อยๆ กินด้วยน้า จะได้อารมณ์ดีตลอดวัน! 🍰🧋💕
+            </p>
+        </div>
+
+        <!-- เพลงพิเศษ -->
+        <div class="audio-box">
+            <p class="song-title">เพลงพิเศษสำหรับคุณ 🎶</p>
+            <audio controls>
+                <source src="f4c60eec-286e-4f79-9176-7ac2e41cee87 (online-audio-converter.com).mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+
+        <!-- ของที่ชอบ -->
+        <h2 class="favorite-title">✨ ของที่ชอบ ✨</h2>
+        <div class="favorite-box">
+            <p class="favorite-item">ชาไทยซีส 🧋</p>
+        </div>
+
+        <!-- รูปด้านล่าง -->
+<div class="bottom-container">
+    <div class="image-box">
+        <img src="OIP.jpg" alt="Favorite Item" class="valentine-image">
+    </div>
+
+    <div class="image-box">
+        <img src="14-1.png" alt="Bottom Image" class="bottom-image">
+    </div>
+</div>
+
+    <script>
+        function moveToNext(current, nextID) {
+            if (current.value.length === 1) {
+                document.getElementById(nextID).focus();
+            }
+        }
+
+        function checkCode() {
+            let code = "";
+            for (let i = 1; i <= 5; i++) {
+                code += document.getElementById("code" + i).value.toUpperCase();
+            }
+            
+            if (code === "THIMA") {
+                document.getElementById("code-box").style.display = "none";
+                document.getElementById("success-message").style.display = "block";
+                document.getElementById("flower-box").style.display = "block"; // แสดงดอกไม้เมื่อใส่รหัสถูกต้อง
+            }
+        }
+    </script>
+</body>
+</html>

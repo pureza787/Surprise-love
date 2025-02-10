@@ -1,0 +1,326 @@
+/* ตั้งค่าพื้นฐาน */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ADD8E6, #FFC0CB); /* ไล่สีจากฟ้าไปชมพู */
+    height: auto; /* ปรับให้ความสูงอิงตามเนื้อหา */
+    overflow-y: auto; /* เปิดให้เลื่อนหน้า */
+    text-align: center;
+}
+
+/* คอนเทนเนอร์ */
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+/* หัวข้อ */
+h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+/* เปลี่ยนสีข้อความ "สุขสันต์วันวาเลนไทน์ 💖 THIMA 🎉" ให้ตรงกับ "ใส่รหัสของขวัญ" */
+.valentine-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ff69b4; /* สีชมพูสด */
+    text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5); /* เพิ่มเงาให้ดูนุ่มนวล */
+}
+
+/* รูปภาพ */
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* เครื่องเล่นเพลง */
+.audio-box {
+    background-color: #d8f3dc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px auto;
+}
+
+audio {
+    width: 100%;
+}
+
+/* ของที่ชอบ */
+.favorite-title {
+    color: #ff66b2;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.favorite-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.favorite-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6699;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #c2e9fb, #fbc2eb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.code-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code-input input {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.code-input input:focus {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+/* รูปภาพ */
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* เครื่องเล่นเพลง */
+.audio-box {
+    background-color: #d8f3dc;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: 20px auto;
+}
+
+audio {
+    width: 100%;
+}
+
+/* ของที่ชอบ */
+.favorite-title {
+    color: #ff66b2;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.favorite-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.favorite-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6699;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ช่องใส่รหัสของขวัญ */
+.code-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.code-input input {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.code-input input:focus {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+/* ซ่อนข้อความอวยพรก่อน */
+.success-message {
+    display: none;
+    font-size: 20px;
+    color: #ff4d6d;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* เซอร์ไพรส์ (Surprise Section) */
+.success-container {
+    display: none;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 192, 203, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(5px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* เอฟเฟกต์กลิตเตอร์ระยิบระยับ */
+.success-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 10%, transparent 70%);
+    animation: sparkle 3s infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ดอกไม้ตกแต่ง */
+.flower {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* ดอกไม้ GIF */
+.flower-gif {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* เอฟเฟกต์เด้งเบาๆ */
+@keyframes bounce {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+/* แอนิเมชัน */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.flower-box {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.flower-image {
+    display: inline-block;
+    width: 120px;
+    height: auto;
+    margin-left: -55px; /* เลื่อนซ้าย 10px (ปรับค่าตามต้องการ) */
+}
+/*รูปด้านล่าง2*/
+.bottom-container {
+    display: flex;
+    flex-direction: column; /* ให้เรียงจากบนลงล่าง */
+    align-items: center; /* จัดให้อยู่ตรงกลาง */
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.image-box img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto; /* ทำให้รูปอยู่ตรงกลาง */
+}
+
+.bottom-image {
+    width: 250px; /* ปรับขนาดให้เหมาะสม */
+}
+
+.valentine-image {
+    width: 200px; /* ปรับขนาดให้เหมาะสม */
+}
