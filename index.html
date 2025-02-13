@@ -78,34 +78,43 @@
     <script>
         function moveToNext(current, nextID) {
             if (current.value.length === 1) {
-                document.getElementById(nextID).focus();
+                document.getElementById(nextID)?.focus();
             }
         }
-
+    
         function checkCode() {
             let code = "";
             for (let i = 1; i <= 5; i++) {
-                code += document.getElementById("code" + i).value.toUpperCase();
+                code += document.getElementById("code" + i).value.toUpperCase().trim();
             }
             
             if (code === "THIMA") {
                 document.getElementById("code-box").style.display = "none";
                 document.getElementById("success-message").style.display = "block";
-                document.getElementById("flower-box").style.display = "block"; // แสดงดอกไม้เมื่อใส่รหัสถูกต้อง
+                document.getElementById("flower-box").style.display = "block"; // แสดงดอกไม้
+                document.getElementById("start-game-btn").style.display = "block"; // แสดงปุ่ม "ชาไทยซีส 🧋"
             }
         }
-
+    
         function startGame() {
             document.getElementById("game-container").style.display = "block";
+            document.getElementById("start-game-btn").style.display = "none"; // ซ่อนปุ่มเมื่อเริ่มเกม
             let heartsContainer = document.getElementById("hearts");
             heartsContainer.innerHTML = "";
-            let heartCount = Math.floor(Math.random() * 6) + 5; // 5-10 ดวง
+            let heartCount = 20; // ตั้งค่าหัวใจเป็น 20 ดวงแน่นอน
             
             for (let i = 0; i < heartCount; i++) {
                 let heart = document.createElement("div");
                 heart.classList.add("heart");
-                heart.style.left = Math.random() * 90 + "%";
-                heart.style.top = Math.random() * 90 + "%";
+                heart.style.position = "absolute";
+                heart.style.left = Math.random() * 85 + "%"; // ปรับให้กระจายทั่วพื้นที่
+                heart.style.top = Math.random() * 85 + "%";
+                heart.style.width = "40px"; 
+                heart.style.height = "40px";
+                heart.style.backgroundImage = "url('❤️')"; // ใช้ emoji หรือใส่ path รูปภาพ
+                heart.style.backgroundSize = "cover";
+                heart.style.cursor = "pointer";
+                
                 heart.onclick = function() {
                     heart.remove();
                     if (document.getElementsByClassName("heart").length === 0) {
@@ -116,5 +125,8 @@
             }
         }
     </script>
+    
+    <!-- ปุ่มเริ่มมินิเกม (ซ่อนไว้ก่อน จะแสดงเมื่อรหัสถูกต้อง) -->
+    <button id="start-game-btn" style="display: none; font-size: 20px; padding: 10px; background: orange; color: white; border: none; border-radius: 10px; cursor: pointer;" onclick="startGame()">ชาไทยซีส 🧋</button>
 </body>
 </html>
