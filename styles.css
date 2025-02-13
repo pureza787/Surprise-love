@@ -326,6 +326,7 @@ audio {
 }
 
 
+
 .heart {
     width: 40px;
     height: 40px;
@@ -359,3 +360,93 @@ audio {
     left: -20px;
     top: 0;
 }
+
+
+/* จัดให้อยู่ตรงกลางของหน้าจอ */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6ea;
+    font-family: Arial, sans-serif;
+}
+
+/* กรอบวงล้อ */
+.wheel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* วงล้อ */
+.wheel {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ff4081;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: conic-gradient(
+        #ff4081 0deg 60deg,
+        #ff80ab 60deg 120deg,
+        #ff4081 120deg 180deg,
+        #ff80ab 180deg 240deg,
+        #ff4081 240deg 300deg,
+        #ff80ab 300deg 360deg
+    );
+    transition: transform 3s ease-out;
+}
+
+/* ปุ่มหมุน */
+.spin-btn {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.spin-btn:hover {
+    background-color: #e60067;
+}
+
+/* กล่องข้อความ */
+.message-box {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4081;
+    min-height: 30px;
+}
+
+
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+body {
+    background: url('wheel-image.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
