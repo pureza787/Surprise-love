@@ -38,7 +38,6 @@
             </div>
 
             <p class="success-message" id="success-message" style="display: none;">🎉 สุขสันต์วันวาเลนไทน์นะคนสวย 💐
-
                 ขอบคุณที่อยู่ข้างๆกัน ไม่ว่าจะวันดีๆ หรือวันที่เหนื่อยล้า ขอให้วันนี้เป็นอีกหนึ่งวันพิเศษที่เต็มไปด้วยรอยยิ้มและความสุข 😊ขอให้ทุกช่วงเวลาของเธออบอุ่นเเละสดใส เต็มไปด้วยสิ่งดีๆ สมหวังในทุกสิ่งที่ตั้งใจนะ 💖✨ อย่าลืมหาอะไรอร่อยๆ กินด้วยน้า จะได้อารมณ์ดีตลอดวัน! 🍰🧋💕
             </p>
         </div>
@@ -55,19 +54,26 @@
         <!-- ของที่ชอบ -->
         <h2 class="favorite-title">✨ ของที่ชอบ ✨</h2>
         <div class="favorite-box">
-            <p class="favorite-item">ชาไทยซีส 🧋</p>
+            <p class="favorite-item" onclick="startGame()">ชาไทยซีส 🧋</p>
         </div>
 
         <!-- รูปด้านล่าง -->
-<div class="bottom-container">
-    <div class="image-box">
-        <img src="OIP.jpg" alt="Favorite Item" class="valentine-image">
-    </div>
+        <div class="bottom-container">
+            <div class="image-box">
+                <img src="OIP.jpg" alt="Favorite Item" class="valentine-image">
+            </div>
+            <div class="image-box">
+                <img src="14-1.png" alt="Bottom Image" class="bottom-image">
+            </div>
+        </div>
 
-    <div class="image-box">
-        <img src="14-1.png" alt="Bottom Image" class="bottom-image">
+        <!-- เกมหัวใจ -->
+        <div id="game-container" style="display: none; position: relative; height: 400px;">
+            <h2>คลิกหัวใจให้ครบ!</h2>
+            <div id="hearts"></div>
+        </div>
+        <p id="win-message" style="display: none; font-size: 24px; color: red;">คุณชนะใจผมแล้ว! 💖</p>
     </div>
-</div>
 
     <script>
         function moveToNext(current, nextID) {
@@ -86,6 +92,27 @@
                 document.getElementById("code-box").style.display = "none";
                 document.getElementById("success-message").style.display = "block";
                 document.getElementById("flower-box").style.display = "block"; // แสดงดอกไม้เมื่อใส่รหัสถูกต้อง
+            }
+        }
+
+        function startGame() {
+            document.getElementById("game-container").style.display = "block";
+            let heartsContainer = document.getElementById("hearts");
+            heartsContainer.innerHTML = "";
+            let heartCount = Math.floor(Math.random() * 6) + 5; // 5-10 ดวง
+            
+            for (let i = 0; i < heartCount; i++) {
+                let heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.style.left = Math.random() * 90 + "%";
+                heart.style.top = Math.random() * 90 + "%";
+                heart.onclick = function() {
+                    heart.remove();
+                    if (document.getElementsByClassName("heart").length === 0) {
+                        document.getElementById("win-message").style.display = "block";
+                    }
+                };
+                heartsContainer.appendChild(heart);
             }
         }
     </script>
