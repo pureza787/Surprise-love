@@ -73,16 +73,7 @@
             <div id="hearts"></div>
         </div>
         <p id="win-message" style="display: none; font-size: 24px; color: red;">เก่งมากคนสวยคุณได้ชนะใจผมแล้ว💖</p>
-
-
-
-        <div class="wheel-container">
-            <div class="wheel" id="wheel">🎡</div>
-            <button class="spin-btn" onclick="spinWheel()">หมุนวงล้อ</button>
-            <div class="message-box" id="message"></div>
-        </div>
     </div>
-
 
     <script>
         function moveToNext(current, nextID) {
@@ -101,13 +92,12 @@
                 document.getElementById("code-box").style.display = "none";
                 document.getElementById("success-message").style.display = "block";
                 document.getElementById("flower-box").style.display = "block"; // แสดงดอกไม้
-                document.getElementById("start-game-btn").style.display = "block"; // แสดงปุ่ม "ชาไทยซีส 🧋"
+                startGame(); // เริ่มเกมหัวใจทันทีเมื่อใส่รหัสถูก
             }
         }
     
         function startGame() {
             document.getElementById("game-container").style.display = "block";
-            document.getElementById("start-game-btn").style.display = "none"; // ซ่อนปุ่มเมื่อเริ่มเกม
             let heartsContainer = document.getElementById("hearts");
             heartsContainer.innerHTML = "";
             let heartCount = 20; // ตั้งค่าหัวใจเป็น 20 ดวงแน่นอน
@@ -133,52 +123,6 @@
                 heartsContainer.appendChild(heart);
             }
         }
-        
     </script>
-    
-    <!-- ปุ่มเริ่มมินิเกม (ซ่อนไว้ก่อน จะแสดงเมื่อรหัสถูกต้อง) -->
-    <button id="start-game-btn" style="display: none; font-size: 20px; padding: 10px; background: orange; color: white; border: none; border-radius: 10px; cursor: pointer;" onclick="startGame()">ชาไทยซีส 🧋</button>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หมุนวงล้อสุ่มข้อความหวาน ๆ 💖</title>
-   
-</head>
-<body>
-
-    <div class="wheel-container">
-        <div class="wheel" id="wheel">🎡</div>
-        <button class="spin-btn" onclick="spinWheel()">หมุนวงล้อ</button>
-        <div class="message-box" id="message"></div>
-    </div>
-
-    <script>
-        function spinWheel() {
-            let messages = [
-                "คุณคือคนพิเศษที่สุดในใจฉัน! 💕",
-                "ขอให้วันนี้เต็มไปด้วยรอยยิ้มและความสุข! 😊🌸",
-                "รักคุณเสมอ ไม่ว่าเมื่อไหร่ก็ตาม! 💖✨",
-                "คุณทำให้ทุกวันของฉันสดใส! 🌞💛",
-                "อยากให้คุณรู้ว่ามีคนคิดถึงเสมอ! 💌🥰",
-                "ขอให้วันนี้ของคุณเต็มไปด้วยสิ่งดี ๆ! 🌷🎉"
-            ];
-
-            let wheel = document.getElementById("wheel");
-            let messageBox = document.getElementById("message");
-
-            let randomIndex = Math.floor(Math.random() * messages.length);
-            let randomRotation = 360 * 3 + (randomIndex * (360 / messages.length));
-
-            wheel.style.transform = `rotate(${randomRotation}deg)`;
-
-            setTimeout(() => {
-                messageBox.innerText = messages[randomIndex];
-            }, 3000);
-        }
-    </script>
-
-
-</script>
 </body>
 </html>
